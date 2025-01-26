@@ -1,10 +1,12 @@
 # SequenceBLAST
 
-## This is a basic program for sequence BLAST online from Python. It uses a FASTA file input as the objective sequence for BLAST. It works with blastn, blastp, blastx, tblast and tblastx, depending on the type of sequence used
+### This is a basic program for sequence local and online BLAST from Python. It uses a FASTA file input as the objective sequence for BLAST. It works with blastn, blastp, blastx, tblast and tblastx, depending on the type of sequence used
 
-### The file "sequence.fasta" is used as reference for script testing
+## Online BLAST
 
-### The result obtained should look like the followinng:
+#### The file "sequence.fasta" is used as reference for script testing
+
+#### The result obtained should look like the followinng:
 
     Program: blastn (2.16.1+)
       Query: KX015889.1 (521)
@@ -49,12 +51,12 @@
            49      1  gi|2050378798|gb|MZ363139.1|  Candida tropicalis isolat...
 
 
-### It also shows the result lenght (Number of results obtained for the sequence used):
+#### It also shows the result lenght (Number of results obtained for the sequence used):
 
     Out[12]: 50
 
 
-### It allows the search of specific hits in the query and obtain information about it. For example, the hit obtained in the fourth position:
+#### It allows the search of specific hits in the query and obtain information about it. For example, the hit obtained in the fourth position:
 
 
     Query: KX015889.1
@@ -67,7 +69,7 @@
               0         0     936.33     521          [0:521]                [1:522]
 
 
-### Finally, it shows specific hit for HSPs (High Scoring Pairs) to find regions with high similarity. For example for the first hit and first HSP you would obtain:
+#### Finally, it shows specific hit for HSPs (High Scoring Pairs) to find regions with high similarity. For example for the first hit and first HSP you would obtain:
 
       Query: KX015889.1 Candida tropicalis strain AUMC 10251 18S ribosomal RN...
         Hit: gi|1030177588|gb|KX015889.1| Candida tropicalis strain AUMC 1025...
@@ -78,3 +80,21 @@
      Query - CTTCTGTAGGGTGAACCTGCGGAAGGATCATTACTGATTTGCTTAATTGCACCACATGT~~~AATAA
              |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||~~~|||||
        Hit - CTTCTGTAGGGTGAACCTGCGGAAGGATCATTACTGATTTGCTTAATTGCACCACATGT~~~AATAA
+
+
+##Local Blast
+
+#### The file "sequence.fasta" is used as reference for script testing
+#### and "Model_organisms.fasta" is used as the base file example for creating a local database
+
+#### The result obtained should look like the followinng:
+
+    Query: ID: Query_1
+    Name: <unknown name>
+    Description: ON113916.1 Candida sp. (in: Saccharomycetales) strain IITGBR1 small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete      sequence; and large subunit ribosomal RNA gene, partial sequence
+    Number of features: 0
+    Undefined sequence of length 1662
+    Error parsing the BLAST results: 'Record' object has no attribute 'alignments'
+
+#### In this example case, the rference sequence for BLAST doesn't show any hits from the local 
+#### database created. For further identification, testing with alternative databases would be recommended
