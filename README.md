@@ -82,7 +82,7 @@
        Hit - CTTCTGTAGGGTGAACCTGCGGAAGGATCATTACTGATTTGCTTAATTGCACCACATGT~~~AATAA
 
 
-##Local Blast
+## Local Blast
 
 #### The file "sequence.fasta" is used as reference for script testing
 #### and "Model_organisms.fasta" is used as the base file example for creating a local database
